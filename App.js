@@ -1,7 +1,7 @@
 const getPokemonUrl = (id) => `https://pokeapi.co/api/v2/pokemon/${id}`;
 
 //or Array(length).fill().map(//callback fn)
-const generatePokemomPromise = Array.from({ length: 5 }).map((_, key) =>
+const generatePokemomPromise = Array.from({ length: 50 }).map((_, key) =>
   fetch(getPokemonUrl(key + 1)).then((response) => response.json())
 );
 console.log(generatePokemomPromise);
